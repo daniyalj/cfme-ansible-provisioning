@@ -35,9 +35,8 @@
         power_on_after_clone: no
         from_template: yes
         template_src: "{{ template }}"
- #       esxi:
- #         datacenter: "{{ datacenter }}"
- #         hostname: "{{ esxi_host }}"
+        cluster: cluster01
+        resource_pool: "/Resources"
 
     - name: Gather the facts for the VM
       vsphere_guest:
